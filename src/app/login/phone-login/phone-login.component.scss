@@ -1,0 +1,14 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    >* {
+        margin-top: 10px;
+    }
+}
+
+.buttons-wrapper {
+    display: flex;
+    margin-top: 15px !important;
+    justify-content: space-between;
+}

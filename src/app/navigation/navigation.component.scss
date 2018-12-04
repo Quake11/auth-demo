@@ -1,0 +1,19 @@
+mat-toolbar {
+    display: flex;
+    .title {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+    }
+    nav a {
+        padding: 0 10px;
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.spacer {
+    flex-grow: 1;
+}

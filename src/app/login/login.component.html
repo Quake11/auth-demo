@@ -1,0 +1,43 @@
+<h1 class="mat-headline">Авторизация</h1>
+<div class="wrapper">
+  <div *ngIf="auth.user | async; then authenticated else guest">
+    <!-- template will replace this div -->
+  </div>
+</div>
+
+
+<ng-template #guest>
+  <h3 class="mat-subheading-2">Авторизуйтесь с помощью телефона:</h3>
+  <div class="phone-auth">
+    <button mat-raised-button style="background-color:#ff8100;color:white;width:150px;" (click)="smsLogin()">
+      <i class="far fa-envelope"></i> SMS
+    </button>
+  </div>
+
+  <h3 class="mat-subheading-2">Либо с помощью одной из соц. сетей:</h3>
+
+  <div class="social-buttons">
+    <button mat-raised-button style="background-color:#ea4335;color:white;" (click)="auth.googleLogin()">
+      <i class="fab fa-google-plus-g"></i> Google
+    </button>
+
+    <button mat-raised-button style="background-color:#333;color:white;" (click)="auth.githubLogin()">
+      <i class="fab fa-github"></i> GitHub
+    </button>
+
+    <button mat-raised-button style="background-color:#3b5998;color:white;" (click)="auth.facebookLogin()">
+      <i class="fab fa-facebook"></i> Facebook
+    </button>
+
+
+    <button mat-raised-button style="background-color:#00aced;color:white;" (click)="auth.twitterLogin()">
+      <i class="fab fa-twitter"></i> Twitter
+    </button>
+
+  </div>
+</ng-template>
+
+<ng-template #authenticated>
+  <h3 class="mat-subheading-2">Вы уже авторизованы</h3>
+  <button mat-raised-button color="warn" (click)="auth.signOut()">Выход</button>
+</ng-template>

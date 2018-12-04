@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+  <a routerLink="/" class="title">
+    <img src="assets/firebase.png" style="height:80%;padding:5px;">
+    <h1 class="mat-headline">Демо</h1>
+  </a>
+
+  <span class="spacer"></span>
+  <nav>
+    <a class="mat-subheading-2" routerLink="/">Главная</a>
+    <a class="mat-subheading-2" routerLink="news">Новости</a>
+    <a class="mat-subheading-2" routerLink="todo" *ngIf="auth.user | async">Список задач</a>
+  </nav>
+</mat-toolbar>

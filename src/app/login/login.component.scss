@@ -1,0 +1,23 @@
+i {
+    font-size: 22px;
+    line-height: 1.7em;
+    padding-right: 10px;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    >* {
+        margin: 5px;
+    }
+}
+
+.phone-auth {
+    margin-bottom: 15px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
